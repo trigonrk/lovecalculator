@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "3ae78c7d-0a7f-8c0f-8a60-65c1e312ef6c",
+		"name": "lcc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "astroapi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "astroapi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Basic NjAzNTg1OmMyYjY3MTk4OWFiY2MwYTdhZGRlOTk4NzI4NzFiNGUw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"m_day\": \"2\",\r\n\"m_month\": \"2\",\r\n\"m_year\": \"1987\",\r\n\"m_hour\": \"23\",\r\n\"m_min\": \"29\",\r\n\"m_lat\": \"-37.81400\",\r\n\"m_lon\": \"144.96332\",\r\n\"m_tzone\": \"11\",\r\n\"f_day\": \"18\",\r\n\"f_month\": \"6\",\r\n\"f_year\": \"1983\",\r\n\"f_hour\": \"10\",\r\n\"f_min\": \"2\",\r\n\"f_lat\": \"144.96332\",\r\n\"f_lon\": \"-74.00597\",\r\n\"f_tzone\": \"-5\"\r\n}"
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/match_dashakoot_points ",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"match_dashakoot_points "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LCC API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"male\" : {\r\n\"birth\" : \"02/02/1987\",\r\n\"time\": \"23:29\",\r\n\"location\" : \"Melbourne\",\r\n\"latitude\" : -37.8511,\r\n\"longitude\" : 144.9932,\r\n\"timezone\" : 11\r\n},\r\n\"female\" : {\r\n\"birth\" : \"18/06/1983\",\r\n\"time\": \"10:02\",\r\n\"location\" : \"New York\",\r\n\"latitude\" : 40.71427,\r\n\"longitude\" : -74.00597,\r\n\"timezone\" : -5\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://13.211.227.135:3000/api/v1/match",
+					"protocol": "http",
+					"host": [
+						"13",
+						"211",
+						"227",
+						"135"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LCC API Shabaz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"male\" : {\r\n\"birth\" : \"02/02/1987\",\r\n\"time\": \"23:29\",\r\n\"location\" : \"Melbourne\",\r\n\"latitude\" : -37.8511,\r\n\"longitude\" : 144.9932,\r\n\"timezone\" : 11\r\n},\r\n\"female\" : {\r\n\"birth\" : \"18/06/1983\",\r\n\"time\": \"10:02\",\r\n\"location\" : \"New York\",\r\n\"latitude\" : 40.71427,\r\n\"longitude\" : -74.00597,\r\n\"timezone\" : -5\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://54.145.65.33:3000/api/v1/match",
+					"protocol": "http",
+					"host": [
+						"54",
+						"145",
+						"65",
+						"33"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"match"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

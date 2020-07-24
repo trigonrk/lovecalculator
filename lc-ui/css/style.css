@@ -1,0 +1,1545 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body {
+  background: url('../img/main_bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+input:focus,
+.form-control:focus {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+body.no-bg {
+  background: none;
+}
+
+.blur-backdrop {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #f3f3f3;
+    background: url('../img/main_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+html, body, section {
+    height: 100%;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .modal-dialog {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .modal-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+  }
+  .modal-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(188, 0, 120);
+    border: 0;
+  }
+  .modal-title {
+    font-weight: 300;
+    font-size: 2em;
+    color: #fff;
+    line-height: 30px;
+  }
+  .modal-body {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    font-weight: 300;
+    overflow: auto;
+    background: rgba(71,86,104,0.55);
+  }
+  .modal-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    padding: 10px;
+    background: #f1f3f5;
+  }
+ 
+  .btn-modal 
+   {
+     min-height: 80px;
+   }
+
+
+.btn-primary {
+	background: rgb(188, 0, 120);
+	border-color:  rgb(188, 0, 120);
+}
+
+.home_buttons button {
+  width: 120px
+}
+
+.selftime_to_t,
+.selftime_to {
+  color: #fff;
+  font-weight: 500;
+}
+
+.progress {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 7px solid #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 7px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  border-color: #ffb43e;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 75px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+.progress .progress-value {
+  display: flex;
+  border-radius: 50%;
+  font-size: 36px;
+  text-align: center;
+  line-height: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 300;
+}
+.progress .progress-value div {
+  margin-top: 10px;
+}
+.progress .progress-value span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* This for loop creates the 	necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+*/
+.progress[data-percentage="7"] .progress-right .progress-bar {
+  animation: loading-1 1.5s linear forwards;
+}
+.progress[data-percentage="10"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="14"] .progress-right .progress-bar {
+  animation: loading-2 1.5s linear forwards;
+}
+.progress[data-percentage="20"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="21"] .progress-right .progress-bar {
+  animation: loading-3 1.5s linear forwards;
+}
+.progress[data-percentage="30"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="28"] .progress-right .progress-bar {
+  animation: loading-4 1.5s linear forwards;
+}
+.progress[data-percentage="40"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="50"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="50"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="60"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="60"] .progress-left .progress-bar {
+  animation: loading-1 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="70"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="70"] .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="80"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="80"] .progress-left .progress-bar {
+  animation: loading-3 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="90"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="90"] .progress-left .progress-bar {
+  animation: loading-4 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="100"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="100"] .progress-left .progress-bar {
+  animation: loading-5 1.5s linear forwards 1.5s;
+}
+
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(36);
+    transform: rotate(36deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(72);
+    transform: rotate(72deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(108);
+    transform: rotate(108deg);
+  }
+}
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180);
+    transform: rotate(180deg);
+  }
+}
+.progress {
+  margin-bottom: 1em;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-active {
+	background-color: rgb(188, 0, 120);
+}
+
+.compare-funnel {
+    width: 708px;
+    max-width: 100%;
+}
+
+.compare-panel {
+	background: #283340;
+	color: #fff
+}
+
+.modal-body .compare-panel {
+  height: 420px;
+}
+
+.trust-testimonials li {
+	list-style: none;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	font-family: FontAwesome;
+	content: "\f105";
+	color: #fff;
+}
+
+.compare-sidebar {
+	background: #fff;
+	overflow: auto;
+}
+
+.breadcrumb {
+	width: 400px;
+  background-color: transparent;
+}
+.breadcrumb a {
+	color: #fff;
+}
+
+.close-btn {
+	right: 30px;
+	color: #fff;
+  padding: 0;	
+  width: 15px;
+}
+.close-btn svg {
+	width: 100%;
+}
+
+.birthday-input {
+    background: #f3f3f3;
+    border-radius: 3px;
+    box-shadow: inset 0 -3px 0 0 #cad2d3, inset -1px 0 0 0 #cad2d3;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.birthday-input .input-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.birthday-input label {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Gotham",sans-serif;
+    color: #8899ae;
+    padding-right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.lovec-input-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+.birthday-input input {
+    box-sizing: content-box;
+    padding: 5px 0 20px;
+    font-family: "Roboto",sans-serif;
+    font-size: 22px;
+    color: #283340;
+    letter-spacing: 3px;
+    text-align: center;
+    background: none;
+}
+.lovec-input-container input, .lovec-input-container select {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.lovec-input-container input.myTypeahead,
+.lovec-input-container input.partnerTypeahead {
+    line-height: 50px;
+    padding-bottom: 6px;
+}
+
+
+.lovec-cta {
+    max-width: 210px;
+    width: 100%;
+}
+
+.lovec-errors-container {
+  display: none;
+}
+
+
+
+#user_details,#qualification
+{
+  display:none;
+}
+
+.list-group-item {
+  background: transparent;
+  border: 0;
+}
+
+.typeahead{
+  background-color:#000
+}
+.typeahead:focus{
+  border:1px solid #0097cf
+}
+.tt-query{
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+  -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.075)
+}
+.tt-dropdown-menu{
+  width:320px;
+  margin-top:0;
+  padding:8px 0;
+  background-color:#000;
+  border:1px solid #ccc;
+  border:1px solid rgba(0,0,0,.2);
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+  -webkit-box-shadow:0 5px 10px rgba(0,0,0,.2);
+  -moz-box-shadow:0 5px 10px rgba(0,0,0,.2);
+  box-shadow:0 5px 10px rgba(0,0,0,.2)
+}
+.tt-suggestion{
+  padding:3px 20px;
+  font-size:18px;
+  line-height:24px
+}
+.tt-suggestion p:hover{
+  color:#fff!important
+}
+.tt-cursor{
+  background-color:#0097cf;
+  cursor:pointer
+}
+.tt-suggestion p{
+  margin:0
+}
+label{
+  cursor:pointer;
+  font-size: 0.85rem;
+}
+label input{
+  height:inherit
+}
+.pull-left{
+  float:left
+}
+.dst{
+  width:100px;
+  margin:10px 20px
+}
+#container {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+
+.birthday-input label.error {
+  color: red;
+  margin-bottom: 0;
+  background: #ffa3a3;
+  padding: 5px;
+}
+
+.datepicker-dropdown {
+  font-size: 0.8em;
+}
+.twitter-typeahead pre{
+  text-align: center;
+  width: 100%;
+}
+
+.birthday-input .loading {    
+    background-color: #ffffff;
+    background-image: url("../img//3.gif");
+    background-size: 25px 25px;
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+}
+
+.btn_select {
+  width: 120px;
+}
+
+.firstStep .d-flex .p-2 {
+  width: 20%;
+} 
+
+.datepicker td, .datepicker th {
+  width: 30px;
+  height: 30px;
+}
+
+.firstStep_inner {
+  height: 307px;
+  
+}
+.firstStep {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.step {
+  height: 350px;
+}
+
+
+.layout-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.blur-container {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.contact-panel>section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+.contact-panel aside .top-section .header-sub:first-of-type {
+    max-width: 200px;
+}
+.contact-panel aside .top-section .header-sub {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.contact-panel aside ul {
+    margin-top: 40px;
+    padding-left: 10px;
+    list-style: none;
+}
+.contact-panel aside ul li {
+    font-size: 16px;
+    font-family: "MaisonNeue",sans-serif;
+    font-weight: 300;
+}
+
+
+.contact-panel aside .top-section h1 {
+    font-family: "GTWalsheimProBold",sans-serif;
+    font-size: 54px;
+    line-height: 45px;
+    text-align: left;
+    margin: 6px 0 10px;
+}
+
+.contact-panel aside .top-section {
+    color: #fff;
+}
+
+.contact-panel aside ul, 
+.contact-panel aside ul a {
+    color: #8899ae;
+}
+.contact-panel section .header-sub.little {
+    font-size: 16px;
+}
+.panel-input-container .lovec-input-container .lovec-icon, .form-input-container .lovec-input-container .lovec-icon {
+    position: absolute;
+    -webkit-transition: -webkit-transform .15s linear;
+    transition: -webkit-transform .15s linear;
+    transition: transform .15s linear;
+    transition: transform .15s linear, -webkit-transform .15s linear;
+    z-index: 1;
+    right: 18px;
+    top: 22px;
+}
+.contact-panel .form-input-container .lovec-input-container .lovec-icon {
+    -webkit-transition: -webkit-transform .15s linear;
+    transition: -webkit-transform .15s linear;
+    transition: transform .15s linear;
+    transition: transform .15s linear, -webkit-transform .15s linear;
+}
+.panel-input-container .lovec-input-container, .form-input-container .lovec-input-container {
+    position: relative;
+    background: #fff;
+    border: 1px solid #cad2d3;
+    padding: 0 40px 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.panel-input-container .lovec-input-container input, .panel-input-container .lovec-input-container select, .form-input-container .lovec-input-container input, .form-input-container .lovec-input-container select {
+    height: 62px;
+    font-size: 16px;
+    color: #283340;
+    padding: 0;
+    -webkit-transition: padding-bottom .15s linear;
+    transition: padding-bottom .15s linear;
+}
+.contact-panel .lovec-input-container:nth-of-type(n+2) {
+    margin-top: 10px;
+}
+.contact-panel form .lovec-primary {
+    width: 100%;
+    margin: 10px 0 0;
+    height: 72px;
+    line-height: 72px;
+    font-size: 24px;
+    font-family: "MaisonNeue",sans-serif;
+    font-weight: 700;
+}
+.lovec-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lovec-button {
+    font-family: "MaisonNeue",sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    min-height: 36px;
+    min-width: 88px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    text-transform: none;
+}
+.contact-panel form .-primary .lovec-icon {
+    width: 24px;
+    height: 16px;
+    position: absolute;
+    opacity: .5;
+    top: 28px;
+    right: 21px;
+}
+
+.panel-input-container .lovec-input-container input.lovec-input-clean+.lovec-icon path, .panel-input-container .lovec-input-container select.lovec-input-clean+.lovec-icon path, .form-input-container .lovec-input-container input.lovec-input-clean+.lovec-icon path, .form-input-container .lovec-input-container select.lovec-input-clean+.lovec-icon path {
+    fill: #8899ae;
+}
+
+@media (min-width: 601px){
+  .compare-panel {
+      width: 730px;
+      max-width: 100%;
+  }
+  .responsive-mr {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 768px){
+  .contact-panel .min-responsive {
+      display: none;
+  }
+
+  .contact-panel aside {
+    background: #283340;
+    width: 320px;
+    padding: 30px;
+  }
+
+  .contact-panel aside, 
+  .contact-panel section.form_contact {
+    height: 520px;
+  }
+
+  .contact-panel section.form_contact {
+    width: 440px;
+    padding: 30px 45px;
+  }
+  .contact-panel {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+  }
+  .contact-panel>aside {
+    width: 320px;
+    padding: 30px;
+  }
+}
+
+
+
+@media (max-width: 767px){
+  .home_buttons button {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }  
+  .contact-panel {
+      width: 100%;
+      height: 100%;
+  }  
+  .contact-panel .max-responsive {
+      display: none;
+  }
+  .contact-panel section {
+    height: auto;
+  }
+  .contact-panel>aside {
+    padding: 25px;
+  }
+  .contact-panel>section {
+    padding: 30px 25px;
+    box-sizing: border-box;
+  }
+  .contact-panel .header-sub, .contact-panel form {
+      max-width: 325px;
+      margin-left: auto;
+      margin-right: auto;
+  }  
+  .contact-panel>aside {
+    padding: 25px;
+  }
+  .contact-panel aside ul {
+    margin-top: 0
+  }
+  .home_buttons button {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .firstStep_inner,
+  .modal-body .compare-panel,
+  .step {
+    height: auto;
+  }  
+}
+
+@media(max-width: 480px) {
+  .btn-modal {
+    margin-top: 1rem!important;
+  }
+  .home_buttons button {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .firstStep_inner,
+  .modal-body .compare-panel,
+  .step {
+    height: auto;
+  }
+  .contact-panel>aside .top-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+#email-error,
+#mobilenumber-error,
+#lastname-error,
+#firstname-error {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #f00;
+  font-size: 13px;
+  left: 20px;
+  top: 40px;
+  text-align: left;  
+}
+
+.modal-body-form {
+  top: 0;
+}
+
+.ko-progress-circle {
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  background-color: #D9D9D9;
+  
+  border-radius: 50%;
+}
+.ko-progress-circle .ko-progress-circle__slice, .ko-progress-circle .ko-progress-circle__fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+.ko-progress-circle .ko-progress-circle__slice {
+  clip: rect(0px, 120px, 120px, 60px);
+}
+.ko-progress-circle .ko-progress-circle__slice .ko-progress-circle__fill {
+  clip: rect(0px, 60px, 120px, 0px);
+  background-color: rgb(188, 0, 120);
+}
+.ko-progress-circle .ko-progress-circle__overlay {
+  width: 135px;
+  height: 135px;
+  position: absolute;
+  margin-left: 7.5px;
+  margin-top: 7.5px;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+}
+.ko-progress-circle[data-progress='0'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='0'] .ko-progress-circle__fill {
+  transform: rotate(0deg);
+}
+.ko-progress-circle[data-progress='0'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(0deg);
+}
+.ko-progress-circle[data-progress='1'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='1'] .ko-progress-circle__fill {
+  transform: rotate(1.8deg);
+}
+.ko-progress-circle[data-progress='1'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(3.6deg);
+}
+.ko-progress-circle[data-progress='2'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='2'] .ko-progress-circle__fill {
+  transform: rotate(3.6deg);
+}
+.ko-progress-circle[data-progress='2'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(7.2deg);
+}
+.ko-progress-circle[data-progress='3'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='3'] .ko-progress-circle__fill {
+  transform: rotate(5.4deg);
+}
+.ko-progress-circle[data-progress='3'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(10.8deg);
+}
+.ko-progress-circle[data-progress='4'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='4'] .ko-progress-circle__fill {
+  transform: rotate(7.2deg);
+}
+.ko-progress-circle[data-progress='4'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(14.4deg);
+}
+.ko-progress-circle[data-progress='5'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='5'] .ko-progress-circle__fill {
+  transform: rotate(9deg);
+}
+.ko-progress-circle[data-progress='5'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(18deg);
+}
+.ko-progress-circle[data-progress='6'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='6'] .ko-progress-circle__fill {
+  transform: rotate(10.8deg);
+}
+.ko-progress-circle[data-progress='6'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(21.6deg);
+}
+.ko-progress-circle[data-progress='7'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='7'] .ko-progress-circle__fill {
+  transform: rotate(12.6deg);
+}
+.ko-progress-circle[data-progress='7'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(25.2deg);
+}
+.ko-progress-circle[data-progress='8'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='8'] .ko-progress-circle__fill {
+  transform: rotate(14.4deg);
+}
+.ko-progress-circle[data-progress='8'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(28.8deg);
+}
+.ko-progress-circle[data-progress='9'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='9'] .ko-progress-circle__fill {
+  transform: rotate(16.2deg);
+}
+.ko-progress-circle[data-progress='9'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(32.4deg);
+}
+.ko-progress-circle[data-progress='10'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='10'] .ko-progress-circle__fill {
+  transform: rotate(18deg);
+}
+.ko-progress-circle[data-progress='10'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(36deg);
+}
+.ko-progress-circle[data-progress='11'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='11'] .ko-progress-circle__fill {
+  transform: rotate(19.8deg);
+}
+.ko-progress-circle[data-progress='11'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(39.6deg);
+}
+.ko-progress-circle[data-progress='12'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='12'] .ko-progress-circle__fill {
+  transform: rotate(21.6deg);
+}
+.ko-progress-circle[data-progress='12'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(43.2deg);
+}
+.ko-progress-circle[data-progress='13'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='13'] .ko-progress-circle__fill {
+  transform: rotate(23.4deg);
+}
+.ko-progress-circle[data-progress='13'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(46.8deg);
+}
+.ko-progress-circle[data-progress='14'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='14'] .ko-progress-circle__fill {
+  transform: rotate(25.2deg);
+}
+.ko-progress-circle[data-progress='14'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(50.4deg);
+}
+.ko-progress-circle[data-progress='15'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='15'] .ko-progress-circle__fill {
+  transform: rotate(27deg);
+}
+.ko-progress-circle[data-progress='15'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(54deg);
+}
+.ko-progress-circle[data-progress='16'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='16'] .ko-progress-circle__fill {
+  transform: rotate(28.8deg);
+}
+.ko-progress-circle[data-progress='16'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(57.6deg);
+}
+.ko-progress-circle[data-progress='17'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='17'] .ko-progress-circle__fill {
+  transform: rotate(30.6deg);
+}
+.ko-progress-circle[data-progress='17'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(61.2deg);
+}
+.ko-progress-circle[data-progress='18'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='18'] .ko-progress-circle__fill {
+  transform: rotate(32.4deg);
+}
+.ko-progress-circle[data-progress='18'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(64.8deg);
+}
+.ko-progress-circle[data-progress='19'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='19'] .ko-progress-circle__fill {
+  transform: rotate(34.2deg);
+}
+.ko-progress-circle[data-progress='19'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(68.4deg);
+}
+.ko-progress-circle[data-progress='20'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='20'] .ko-progress-circle__fill {
+  transform: rotate(36deg);
+}
+.ko-progress-circle[data-progress='20'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(72deg);
+}
+.ko-progress-circle[data-progress='21'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='21'] .ko-progress-circle__fill {
+  transform: rotate(37.8deg);
+}
+.ko-progress-circle[data-progress='21'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(75.6deg);
+}
+.ko-progress-circle[data-progress='22'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='22'] .ko-progress-circle__fill {
+  transform: rotate(39.6deg);
+}
+.ko-progress-circle[data-progress='22'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(79.2deg);
+}
+.ko-progress-circle[data-progress='23'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='23'] .ko-progress-circle__fill {
+  transform: rotate(41.4deg);
+}
+.ko-progress-circle[data-progress='23'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(82.8deg);
+}
+.ko-progress-circle[data-progress='24'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='24'] .ko-progress-circle__fill {
+  transform: rotate(43.2deg);
+}
+.ko-progress-circle[data-progress='24'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(86.4deg);
+}
+.ko-progress-circle[data-progress='25'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='25'] .ko-progress-circle__fill {
+  transform: rotate(45deg);
+}
+.ko-progress-circle[data-progress='25'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(90deg);
+}
+.ko-progress-circle[data-progress='26'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='26'] .ko-progress-circle__fill {
+  transform: rotate(46.8deg);
+}
+.ko-progress-circle[data-progress='26'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(93.6deg);
+}
+.ko-progress-circle[data-progress='27'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='27'] .ko-progress-circle__fill {
+  transform: rotate(48.6deg);
+}
+.ko-progress-circle[data-progress='27'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(97.2deg);
+}
+.ko-progress-circle[data-progress='28'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='28'] .ko-progress-circle__fill {
+  transform: rotate(50.4deg);
+}
+.ko-progress-circle[data-progress='28'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(100.8deg);
+}
+.ko-progress-circle[data-progress='29'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='29'] .ko-progress-circle__fill {
+  transform: rotate(52.2deg);
+}
+.ko-progress-circle[data-progress='29'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(104.4deg);
+}
+.ko-progress-circle[data-progress='30'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='30'] .ko-progress-circle__fill {
+  transform: rotate(54deg);
+}
+.ko-progress-circle[data-progress='30'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(108deg);
+}
+.ko-progress-circle[data-progress='31'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='31'] .ko-progress-circle__fill {
+  transform: rotate(55.8deg);
+}
+.ko-progress-circle[data-progress='31'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(111.6deg);
+}
+.ko-progress-circle[data-progress='32'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='32'] .ko-progress-circle__fill {
+  transform: rotate(57.6deg);
+}
+.ko-progress-circle[data-progress='32'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(115.2deg);
+}
+.ko-progress-circle[data-progress='33'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='33'] .ko-progress-circle__fill {
+  transform: rotate(59.4deg);
+}
+.ko-progress-circle[data-progress='33'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(118.8deg);
+}
+.ko-progress-circle[data-progress='34'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='34'] .ko-progress-circle__fill {
+  transform: rotate(61.2deg);
+}
+.ko-progress-circle[data-progress='34'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(122.4deg);
+}
+.ko-progress-circle[data-progress='35'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='35'] .ko-progress-circle__fill {
+  transform: rotate(63deg);
+}
+.ko-progress-circle[data-progress='35'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(126deg);
+}
+.ko-progress-circle[data-progress='36'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='36'] .ko-progress-circle__fill {
+  transform: rotate(64.8deg);
+}
+.ko-progress-circle[data-progress='36'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(129.6deg);
+}
+.ko-progress-circle[data-progress='37'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='37'] .ko-progress-circle__fill {
+  transform: rotate(66.6deg);
+}
+.ko-progress-circle[data-progress='37'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(133.2deg);
+}
+.ko-progress-circle[data-progress='38'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='38'] .ko-progress-circle__fill {
+  transform: rotate(68.4deg);
+}
+.ko-progress-circle[data-progress='38'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(136.8deg);
+}
+.ko-progress-circle[data-progress='39'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='39'] .ko-progress-circle__fill {
+  transform: rotate(70.2deg);
+}
+.ko-progress-circle[data-progress='39'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(140.4deg);
+}
+.ko-progress-circle[data-progress='40'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='40'] .ko-progress-circle__fill {
+  transform: rotate(72deg);
+}
+.ko-progress-circle[data-progress='40'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(144deg);
+}
+.ko-progress-circle[data-progress='41'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='41'] .ko-progress-circle__fill {
+  transform: rotate(73.8deg);
+}
+.ko-progress-circle[data-progress='41'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(147.6deg);
+}
+.ko-progress-circle[data-progress='42'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='42'] .ko-progress-circle__fill {
+  transform: rotate(75.6deg);
+}
+.ko-progress-circle[data-progress='42'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(151.2deg);
+}
+.ko-progress-circle[data-progress='43'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='43'] .ko-progress-circle__fill {
+  transform: rotate(77.4deg);
+}
+.ko-progress-circle[data-progress='43'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(154.8deg);
+}
+.ko-progress-circle[data-progress='44'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='44'] .ko-progress-circle__fill {
+  transform: rotate(79.2deg);
+}
+.ko-progress-circle[data-progress='44'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(158.4deg);
+}
+.ko-progress-circle[data-progress='45'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='45'] .ko-progress-circle__fill {
+  transform: rotate(81deg);
+}
+.ko-progress-circle[data-progress='45'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(162deg);
+}
+.ko-progress-circle[data-progress='46'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='46'] .ko-progress-circle__fill {
+  transform: rotate(82.8deg);
+}
+.ko-progress-circle[data-progress='46'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(165.6deg);
+}
+.ko-progress-circle[data-progress='47'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='47'] .ko-progress-circle__fill {
+  transform: rotate(84.6deg);
+}
+.ko-progress-circle[data-progress='47'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(169.2deg);
+}
+.ko-progress-circle[data-progress='48'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='48'] .ko-progress-circle__fill {
+  transform: rotate(86.4deg);
+}
+.ko-progress-circle[data-progress='48'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(172.8deg);
+}
+.ko-progress-circle[data-progress='49'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='49'] .ko-progress-circle__fill {
+  transform: rotate(88.2deg);
+}
+.ko-progress-circle[data-progress='49'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(176.4deg);
+}
+.ko-progress-circle[data-progress='50'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='50'] .ko-progress-circle__fill {
+  transform: rotate(90deg);
+}
+.ko-progress-circle[data-progress='50'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(180deg);
+}
+.ko-progress-circle[data-progress='51'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='51'] .ko-progress-circle__fill {
+  transform: rotate(91.8deg);
+}
+.ko-progress-circle[data-progress='51'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(183.6deg);
+}
+.ko-progress-circle[data-progress='52'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='52'] .ko-progress-circle__fill {
+  transform: rotate(93.6deg);
+}
+.ko-progress-circle[data-progress='52'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(187.2deg);
+}
+.ko-progress-circle[data-progress='53'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='53'] .ko-progress-circle__fill {
+  transform: rotate(95.4deg);
+}
+.ko-progress-circle[data-progress='53'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(190.8deg);
+}
+.ko-progress-circle[data-progress='54'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='54'] .ko-progress-circle__fill {
+  transform: rotate(97.2deg);
+}
+.ko-progress-circle[data-progress='54'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(194.4deg);
+}
+.ko-progress-circle[data-progress='55'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='55'] .ko-progress-circle__fill {
+  transform: rotate(99deg);
+}
+.ko-progress-circle[data-progress='55'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(198deg);
+}
+.ko-progress-circle[data-progress='56'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='56'] .ko-progress-circle__fill {
+  transform: rotate(100.8deg);
+}
+.ko-progress-circle[data-progress='56'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(201.6deg);
+}
+.ko-progress-circle[data-progress='57'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='57'] .ko-progress-circle__fill {
+  transform: rotate(102.6deg);
+}
+.ko-progress-circle[data-progress='57'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(205.2deg);
+}
+.ko-progress-circle[data-progress='58'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='58'] .ko-progress-circle__fill {
+  transform: rotate(104.4deg);
+}
+.ko-progress-circle[data-progress='58'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(208.8deg);
+}
+.ko-progress-circle[data-progress='59'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='59'] .ko-progress-circle__fill {
+  transform: rotate(106.2deg);
+}
+.ko-progress-circle[data-progress='59'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(212.4deg);
+}
+.ko-progress-circle[data-progress='60'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='60'] .ko-progress-circle__fill {
+  transform: rotate(108deg);
+}
+.ko-progress-circle[data-progress='60'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(216deg);
+}
+.ko-progress-circle[data-progress='61'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='61'] .ko-progress-circle__fill {
+  transform: rotate(109.8deg);
+}
+.ko-progress-circle[data-progress='61'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(219.6deg);
+}
+.ko-progress-circle[data-progress='62'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='62'] .ko-progress-circle__fill {
+  transform: rotate(111.6deg);
+}
+.ko-progress-circle[data-progress='62'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(223.2deg);
+}
+.ko-progress-circle[data-progress='63'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='63'] .ko-progress-circle__fill {
+  transform: rotate(113.4deg);
+}
+.ko-progress-circle[data-progress='63'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(226.8deg);
+}
+.ko-progress-circle[data-progress='64'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='64'] .ko-progress-circle__fill {
+  transform: rotate(115.2deg);
+}
+.ko-progress-circle[data-progress='64'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(230.4deg);
+}
+.ko-progress-circle[data-progress='65'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='65'] .ko-progress-circle__fill {
+  transform: rotate(117deg);
+}
+.ko-progress-circle[data-progress='65'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(234deg);
+}
+.ko-progress-circle[data-progress='66'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='66'] .ko-progress-circle__fill {
+  transform: rotate(118.8deg);
+}
+.ko-progress-circle[data-progress='66'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(237.6deg);
+}
+.ko-progress-circle[data-progress='67'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='67'] .ko-progress-circle__fill {
+  transform: rotate(120.6deg);
+}
+.ko-progress-circle[data-progress='67'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(241.2deg);
+}
+.ko-progress-circle[data-progress='68'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='68'] .ko-progress-circle__fill {
+  transform: rotate(122.4deg);
+}
+.ko-progress-circle[data-progress='68'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(244.8deg);
+}
+.ko-progress-circle[data-progress='69'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='69'] .ko-progress-circle__fill {
+  transform: rotate(124.2deg);
+}
+.ko-progress-circle[data-progress='69'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(248.4deg);
+}
+.ko-progress-circle[data-progress='70'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='70'] .ko-progress-circle__fill {
+  transform: rotate(126deg);
+}
+.ko-progress-circle[data-progress='70'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(252deg);
+}
+.ko-progress-circle[data-progress='71'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='71'] .ko-progress-circle__fill {
+  transform: rotate(127.8deg);
+}
+.ko-progress-circle[data-progress='71'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(255.6deg);
+}
+.ko-progress-circle[data-progress='72'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='72'] .ko-progress-circle__fill {
+  transform: rotate(129.6deg);
+}
+.ko-progress-circle[data-progress='72'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(259.2deg);
+}
+.ko-progress-circle[data-progress='73'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='73'] .ko-progress-circle__fill {
+  transform: rotate(131.4deg);
+}
+.ko-progress-circle[data-progress='73'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(262.8deg);
+}
+.ko-progress-circle[data-progress='74'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='74'] .ko-progress-circle__fill {
+  transform: rotate(133.2deg);
+}
+.ko-progress-circle[data-progress='74'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(266.4deg);
+}
+.ko-progress-circle[data-progress='75'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='75'] .ko-progress-circle__fill {
+  transform: rotate(135deg);
+}
+.ko-progress-circle[data-progress='75'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(270deg);
+}
+.ko-progress-circle[data-progress='76'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='76'] .ko-progress-circle__fill {
+  transform: rotate(136.8deg);
+}
+.ko-progress-circle[data-progress='76'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(273.6deg);
+}
+.ko-progress-circle[data-progress='77'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='77'] .ko-progress-circle__fill {
+  transform: rotate(138.6deg);
+}
+.ko-progress-circle[data-progress='77'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(277.2deg);
+}
+.ko-progress-circle[data-progress='78'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='78'] .ko-progress-circle__fill {
+  transform: rotate(140.4deg);
+}
+.ko-progress-circle[data-progress='78'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(280.8deg);
+}
+.ko-progress-circle[data-progress='79'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='79'] .ko-progress-circle__fill {
+  transform: rotate(142.2deg);
+}
+.ko-progress-circle[data-progress='79'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(284.4deg);
+}
+.ko-progress-circle[data-progress='80'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='80'] .ko-progress-circle__fill {
+  transform: rotate(144deg);
+}
+.ko-progress-circle[data-progress='80'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(288deg);
+}
+.ko-progress-circle[data-progress='81'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='81'] .ko-progress-circle__fill {
+  transform: rotate(145.8deg);
+}
+.ko-progress-circle[data-progress='81'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(291.6deg);
+}
+.ko-progress-circle[data-progress='82'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='82'] .ko-progress-circle__fill {
+  transform: rotate(147.6deg);
+}
+.ko-progress-circle[data-progress='82'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(295.2deg);
+}
+.ko-progress-circle[data-progress='83'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='83'] .ko-progress-circle__fill {
+  transform: rotate(149.4deg);
+}
+.ko-progress-circle[data-progress='83'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(298.8deg);
+}
+.ko-progress-circle[data-progress='84'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='84'] .ko-progress-circle__fill {
+  transform: rotate(151.2deg);
+}
+.ko-progress-circle[data-progress='84'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(302.4deg);
+}
+.ko-progress-circle[data-progress='85'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='85'] .ko-progress-circle__fill {
+  transform: rotate(153deg);
+}
+.ko-progress-circle[data-progress='85'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(306deg);
+}
+.ko-progress-circle[data-progress='86'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='86'] .ko-progress-circle__fill {
+  transform: rotate(154.8deg);
+}
+.ko-progress-circle[data-progress='86'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(309.6deg);
+}
+.ko-progress-circle[data-progress='87'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='87'] .ko-progress-circle__fill {
+  transform: rotate(156.6deg);
+}
+.ko-progress-circle[data-progress='87'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(313.2deg);
+}
+.ko-progress-circle[data-progress='88'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='88'] .ko-progress-circle__fill {
+  transform: rotate(158.4deg);
+}
+.ko-progress-circle[data-progress='88'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(316.8deg);
+}
+.ko-progress-circle[data-progress='89'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='89'] .ko-progress-circle__fill {
+  transform: rotate(160.2deg);
+}
+.ko-progress-circle[data-progress='89'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(320.4deg);
+}
+.ko-progress-circle[data-progress='90'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='90'] .ko-progress-circle__fill {
+  transform: rotate(162deg);
+}
+.ko-progress-circle[data-progress='90'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(324deg);
+}
+.ko-progress-circle[data-progress='91'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='91'] .ko-progress-circle__fill {
+  transform: rotate(163.8deg);
+}
+.ko-progress-circle[data-progress='91'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(327.6deg);
+}
+.ko-progress-circle[data-progress='92'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='92'] .ko-progress-circle__fill {
+  transform: rotate(165.6deg);
+}
+.ko-progress-circle[data-progress='92'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(331.2deg);
+}
+.ko-progress-circle[data-progress='93'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='93'] .ko-progress-circle__fill {
+  transform: rotate(167.4deg);
+}
+.ko-progress-circle[data-progress='93'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(334.8deg);
+}
+.ko-progress-circle[data-progress='94'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='94'] .ko-progress-circle__fill {
+  transform: rotate(169.2deg);
+}
+.ko-progress-circle[data-progress='94'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(338.4deg);
+}
+.ko-progress-circle[data-progress='95'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='95'] .ko-progress-circle__fill {
+  transform: rotate(171deg);
+}
+.ko-progress-circle[data-progress='95'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(342deg);
+}
+.ko-progress-circle[data-progress='96'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='96'] .ko-progress-circle__fill {
+  transform: rotate(172.8deg);
+}
+.ko-progress-circle[data-progress='96'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(345.6deg);
+}
+.ko-progress-circle[data-progress='97'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='97'] .ko-progress-circle__fill {
+  transform: rotate(174.6deg);
+}
+.ko-progress-circle[data-progress='97'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(349.2deg);
+}
+.ko-progress-circle[data-progress='98'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='98'] .ko-progress-circle__fill {
+  transform: rotate(176.4deg);
+}
+.ko-progress-circle[data-progress='98'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(352.8deg);
+}
+.ko-progress-circle[data-progress='99'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='99'] .ko-progress-circle__fill {
+  transform: rotate(178.2deg);
+}
+.ko-progress-circle[data-progress='99'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(356.4deg);
+}
+.ko-progress-circle[data-progress='100'] .ko-progress-circle__slice.full, .ko-progress-circle[data-progress='100'] .ko-progress-circle__fill {
+  transform: rotate(180deg);
+}
+.ko-progress-circle[data-progress='100'] .ko-progress-circle__fill.ko-progress-circle__bar {
+  transform: rotate(360deg);
+}
+
+.ko-progress-circle .progress-value {
+  display: flex;
+  border-radius: 50%;
+  font-size: 36px;
+  text-align: center;
+  line-height: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 300;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+.ko-progress-circle .progress-value div {
+  margin-top: 10px;
+}
+.ko-progress-circle .progress-value span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
