@@ -34,7 +34,6 @@ jobs:
     #build our code
     - name: Build
       run: |
-        npm init
         npm install
         npm start
     #Deploy to Firebase 
